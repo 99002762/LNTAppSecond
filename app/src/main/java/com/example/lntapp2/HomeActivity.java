@@ -35,7 +35,8 @@ public class HomeActivity extends AppCompatActivity {
          }
         ListView countriesListView = findViewById(R.id.countriesListview);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, //layout file of each row in the listview
+               R.layout.row_listview,
+               // android.R.layout.simple_list_item_1, //layout file of each row in the listview
                 languages);
         countriesListView.setAdapter(adapter);
     }
