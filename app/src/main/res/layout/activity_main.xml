@@ -14,7 +14,7 @@
         android:layout_marginStart="83dp"
         android:layout_marginTop="126dp"
         android:ems="10"
-        android:hint="enter name"
+        android:hint="enter name "
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintStart_toStartOf="parent"
