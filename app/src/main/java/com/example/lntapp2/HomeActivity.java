@@ -24,9 +24,10 @@ public class HomeActivity extends AppCompatActivity {
         String data = extras.getString("srisai");
 
         TextView textView = findViewById(R.id.textView);
-
+        TextView textView2 = findViewById(R.id.textView2);
+        String data2 = "hello everyone";
         textView.setText(data);
-
+        textView2.setText(data2);
     }
 
 }
