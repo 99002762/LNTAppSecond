@@ -38,28 +38,29 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="33dp"
         android:text="Remember Password"
-        app:layout_constraintEnd_toEndOf="@+id/button3"
-        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="@+id/buttonlogin"
+        app:layout_constraintStart_toEndOf="@+id/buttonlogin"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonlogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="87dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="36dp"
         android:onClick="clickHandler"
         android:text="Login"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/switch1" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonsignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:onClick="clickHandler"
         android:text="SignUp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button3"
-        app:layout_constraintStart_toEndOf="@+id/button3" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonlogin"
+        app:layout_constraintStart_toEndOf="@+id/buttonlogin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,13 +21,36 @@ public class HomeActivity extends AppCompatActivity {
 
         Bundle extras = intent.getExtras();
 
-        String data = extras.getString("srisai");
+        String data = extras.getString("srisai","chinnu");
 
         TextView textView = findViewById(R.id.textView);
         TextView textView2 = findViewById(R.id.textView2);
         String data2 = "hello everyone";
         textView.setText(data);
         textView2.setText(data2);
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.i(TAG,"onStart");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i(TAG,"onPause");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i(TAG,"onResume");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i(TAG,"onStop");
     }
 
 }
