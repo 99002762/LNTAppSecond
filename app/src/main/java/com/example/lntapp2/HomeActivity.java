@@ -25,7 +25,7 @@ public class HomeActivity extends AppCompatActivity {
 
         TextView textView = findViewById(R.id.textView);
         TextView textView2 = findViewById(R.id.textView2);
-        String data2 = "hello everyone this is my app";
+        String data2 = "hello everyone this is my application";
         textView.setText(data);
         textView2.setText(data2);
     }
