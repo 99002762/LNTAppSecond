@@ -60,4 +60,25 @@
         android:text="TextView"
         app:layout_constraintStart_toStartOf="@+id/titleText"
         app:layout_constraintTop_toBottomOf="@+id/titleText" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:onClick="serviceHandler"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonStop"
+        app:layout_constraintStart_toStartOf="@+id/authorText" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="39dp"
+        android:text="Stop"
+        android:onClick="serviceHandler"
+        app:layout_constraintStart_toEndOf="@+id/buttonStart"
+        app:layout_constraintTop_toBottomOf="@+id/authorText" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
