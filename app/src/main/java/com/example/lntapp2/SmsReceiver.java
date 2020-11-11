@@ -13,7 +13,7 @@ public class SmsReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         // TODO: This method is called when the BroadcastReceiver is receiving
         // an Intent broadcast.
-        //
+        // Toast.makeText(context,"abdul u've recvd sms",Toast.LENGTH_SHORT).show();
         if (intent.getAction().equals("android.provider.Telephony.SMS_RECEIVED")) {
             Bundle bundle = intent.getExtras();
             SmsMessage[] msgs = null;
