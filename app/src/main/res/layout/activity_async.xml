@@ -24,7 +24,7 @@
         android:layout_marginStart="84dp"
         android:layout_marginTop="256dp"
         android:onClick="handleClick"
-        android:text="Search Book"
+        android:text="@string/button_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,7 +35,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginBottom="64dp"
         android:ems="10"
-        android:hint="enter book Name"
+        android:hint="@string/input_hint"
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/searchButton"
