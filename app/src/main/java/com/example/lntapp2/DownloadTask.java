@@ -3,6 +3,7 @@ package com.example.lntapp2;
 import android.nfc.Tag;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.view.View;
 import android.widget.ProgressBar;
 
 //input type, progress type,result type
@@ -16,6 +17,18 @@ public class DownloadTask  extends AsyncTask<String,Integer,Void> {
 
     }
 
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        mProgressBar.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    protected void onPostExecute(Void aVoid) {
+        super.onPostExecute(aVoid);
+        mProgressBar.setVisibility(View.INVISIBLE);
+    }
+
     /**
      * this method run on a seperate thread
      * @param strings
@@ -24,7 +37,7 @@ public class DownloadTask  extends AsyncTask<String,Integer,Void> {
     @Override
     protected Void doInBackground(String... strings) {
 
-        Log.i(TAG,"doInBackground"+strings[0]);
+        Log.i(TAG,"doInBackground "+strings[0]);
         try {
         for(int i=1; i<21; i++){
             publishProgress(i*5);
