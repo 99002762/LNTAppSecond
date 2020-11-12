@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.View;
 import android.widget.CursorAdapter;
@@ -43,12 +44,20 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         Log.i(TAG,"onStart");
         ListView dbListView = findViewById(R.id.dblistview);
-        Cursor dataCursor = dbAccessObj.getRows();
+//        Uri uriSms = Uri.parse("content://sms/inbox");
+//        Cursor dataCursor =  getContentResolver().query(uriSms,null,null,null,null);
+        Uri allContacts = Uri.parse("content://contacts/people");
+        Cursor dataCursor =  getContentResolver().query(allContacts,null,null,null,null);
+        //Cursor dataCursor = dbAccessObj.getRows();
         //put the data into adapter
         CursorAdapter adapter = new SimpleCursorAdapter(this,
                 R.layout.row_listview,
                 dataCursor,
-                new String[]{FeedReaderContract.FeedEntry.COLUMN_NAME_TITLE, FeedReaderContract.FeedEntry.COLUMN_NAME_SUBTITLE},
+                 new String[] {
+                ContactsContract.Contacts.DISPLAY_NAME,
+                ContactsContract.Contacts._ID },
+               // new String[]{"body","address"},
+                //new String[]{FeedReaderContract.FeedEntry.COLUMN_NAME_TITLE, FeedReaderContract.FeedEntry.COLUMN_NAME_SUBTITLE},
                 //"title","subtitle"},
                 new int[] {R.id.textviewRow,R.id.textViewsubtitle});
         //set the adapter onto the listview
@@ -125,8 +134,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getCredentials() {
-        String pwd = dbAccessObj.query(nameEditText.getText().toString());
-        pwdEditText.setText(pwd);
+     String pwd = dbAccessObj.query(nameEditText.getText().toString());
+       pwdEditText.setText(pwd);
+        dbAccessObj.query(nameEditText.getText().toString());
     }
 
     private void startHome() {
