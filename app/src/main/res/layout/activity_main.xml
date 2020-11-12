@@ -11,8 +11,8 @@
         android:id="@+id/editTextName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="83dp"
-        android:layout_marginTop="126dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="132dp"
         android:ems="10"
         android:hint="enter name "
         android:inputType="textPersonName"
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="enter password"
         android:inputType="textPassword"
@@ -36,9 +36,10 @@
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="32dp"
         android:text="Remember Password"
         app:layout_constraintEnd_toEndOf="@+id/buttonlogin"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/buttonlogin"
         app:layout_constraintTop_toBottomOf="@+id/editTextPwd" />
 
@@ -46,8 +47,8 @@
         android:id="@+id/buttonlogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:onClick="clickHandler"
         android:text="Login"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,5 +63,38 @@
         android:text="SignUp"
         app:layout_constraintBaseline_toBaselineOf="@+id/buttonlogin"
         app:layout_constraintStart_toEndOf="@+id/buttonlogin" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="78dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Put"
+        android:onClick="handleDbPart"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextName"
+        app:layout_constraintStart_toEndOf="@+id/editTextName" />
+
+    <Button
+        android:id="@+id/buttonGet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="3dp"
+        android:text="Get"
+        android:onClick="handleDbPart"
+        app:layout_constraintEnd_toEndOf="@+id/buttonPut"
+        app:layout_constraintTop_toTopOf="@+id/editTextPwd" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
