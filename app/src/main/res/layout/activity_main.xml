@@ -65,7 +65,7 @@
         app:layout_constraintStart_toEndOf="@+id/buttonlogin" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewdb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
@@ -81,8 +81,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:text="Put"
         android:onClick="handleDbPart"
+        android:text="Put"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextName"
         app:layout_constraintStart_toEndOf="@+id/editTextName" />
 
@@ -92,9 +92,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="3dp"
-        android:text="Get"
         android:onClick="handleDbPart"
+        android:text="Get"
         app:layout_constraintEnd_toEndOf="@+id/buttonPut"
         app:layout_constraintTop_toTopOf="@+id/editTextPwd" />
+
+    <ListView
+        android:id="@+id/dblistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="390dp"
+        app:layout_constraintStart_toStartOf="@id/buttonlogin"
+        app:layout_constraintTop_toBottomOf="@id/buttonlogin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
