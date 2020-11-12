@@ -111,7 +111,8 @@ public class MainActivity extends AppCompatActivity {
         Log.e(TAG,"clickHandler");
         switch (view.getId()){
             case R.id.buttonlogin:
-                startHome();
+                //startHome();
+                getCredentials();
                 break;
             case R.id.buttonsignup:
                 Intent dialIntent = new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.google.com"));
@@ -121,6 +122,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+    }
+
+    private void getCredentials() {
+        String pwd = dbAccessObj.query(nameEditText.getText().toString());
+        pwdEditText.setText(pwd);
     }
 
     private void startHome() {
