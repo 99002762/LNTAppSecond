@@ -30,7 +30,11 @@ public class NetworkUtils {
                     .appendQueryParameter(MAX_RESULTS, "10")
                     .appendQueryParameter(PRINT_TYPE, "books")
                     .build();
+            Log.i(LOG_TAG,builtURI.toString());
+
             URL requestURL = new URL(builtURI.toString());
+
+           // Log.i(LOG_TAG,requestURL.toString());
 
             urlConnection = (HttpURLConnection) requestURL.openConnection();
             urlConnection.setRequestMethod("GET");
